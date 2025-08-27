@@ -1,7 +1,9 @@
 public class Questao05 {
 	public static void main(String[] args) {
 		// Declarando variáveis
-		int n1, n2, n3, n4, teste;
+		int n1, n2, n3, n4;
+		
+		boolean encontrou = false;
 		
 		// Capturando dados
 		System.out.println("Digite o primeiro valor inteiro: ");
@@ -19,15 +21,19 @@ public class Questao05 {
 		
 		// Manipulando e retorno dos dados		
 		if ((n1 % 2 == 0) || (n1 % 3 == 0)) {
-			System.out.printf("O valor %d é divisível por 2 ou 3.", n1);
-		} else if ((n2 % 2 == 0) || (n2 % 3 == 0)) {
-			System.out.printf("O valor %d é divisível por 2 ou 3.", n2);
-		} else if ((n3 % 2 == 0) || (n3 % 3 == 0)) {
-			System.out.printf("O valor %d é divisível por 2 ou 3.", n3);
-		} else if ((n4 % 2 == 0) || (n4 % 3 == 0)) {
-			System.out.printf("O valor %d é divisível por 2 ou 3.", n4);
-		} else {
-			System.out.println("Os valores informados não são divisíveis por 2 ou 3.");
+			System.out.printf("\nO valor %d é divisível por 2 ou 3.\n", n1);
+			encontrou = true;
+		} if ((n2 % 2 == 0) || (n2 % 3 == 0)) {
+			System.out.printf("O valor %d é divisível por 2 ou 3.\n", n2);
+			encontrou = true;
+		} if ((n3 % 2 == 0) || (n3 % 3 == 0)) {
+			System.out.printf("O valor %d é divisível por 2 ou 3.\n", n3);
+			encontrou = true;
+		} if ((n4 % 2 == 0) || (n4 % 3 == 0)) {
+			System.out.printf("O valor %d é divisível por 2 ou 3.\n", n4);
+			encontrou = true;
+		} if (!encontrou) {
+			System.out.println("Os valores informados não são divisíveis por 2 ou 3.\n");
 		} 
 	}
 }
